@@ -1,0 +1,7 @@
+.idea
+composer.lock
+composer.phar
+PhpMecabSubstitute.iml
+vendor
+
+!.gitkeep

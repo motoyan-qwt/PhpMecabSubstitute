@@ -1,0 +1,26 @@
+{
+    "name": "qwintet/php-mecab-substitute",
+    "description": "php-mecabがなぜだか動かなくなってしまう環境での代替ライブラリ",
+    "keywords": [
+        "mecab", "php-mecab"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "motoyanagi",
+            "email": "motoyanagi@qwintet.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.4.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        },
+        "files": [
+            "src/functions/global.php",
+            "src/functions/original.php"
+        ]
+    }
+}
