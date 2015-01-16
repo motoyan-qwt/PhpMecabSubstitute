@@ -3,6 +3,7 @@ build:
         before:
             - sudo apt-get update
             - sudo apt-get -y install mecab libmecab-dev mecab-ipadic-utf8
+            - php composer.phar update
     environment:
         php:
             version: 5.4.28
