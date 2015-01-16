@@ -30,6 +30,12 @@ class MeCab_Command
 		$this->_options = $merged_options;
 	}
 
+	/**
+	 * mecabコマンドの実行
+	 *
+	 * @param string $word
+	 * @return array|null
+	 */
 	public function exec($word)
 	{
 		return PhpMecabSubstitueFunctions\mecab_call($word, $this->_options);
