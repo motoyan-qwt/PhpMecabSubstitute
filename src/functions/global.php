@@ -20,7 +20,7 @@ if (function_exists('mecab_split')) {
 	function mecab_split($word, $dicdir = null, $userdic = null)
 	{
 		if (!is_string($word)) {
-			trigger_error(__FUNCTION__ . '() expects parameter 1 to be string.', E_USER_WARNING);
+			trigger_error('mecab_split() expects parameter 1 to be string.', E_USER_WARNING);
 			return null;
 		}
 
