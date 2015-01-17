@@ -1,9 +1,6 @@
 build:
     dependencies:
         before:
-            - pwd
-            - ls -al
-            - cat vendor/composer/autoload_psr4.php
             - sudo apt-get update
             - sudo apt-get -y install mecab libmecab-dev mecab-ipadic-utf8
     environment:
@@ -12,7 +9,7 @@ build:
     tests:
         override:
             -
-                command: 'phpunit'
+                command: 'vendor/bin/phpunit'
                 coverage:
                     file: build/logs/clover.xml
                     format: php-clover
