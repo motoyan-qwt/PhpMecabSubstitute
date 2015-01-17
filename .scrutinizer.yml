@@ -1,6 +1,7 @@
 build:
     dependencies:
         before:
+            - pwd
             - ls -al
             - cat vendor/composer/autoload_psr4.php
             - sudo apt-get update
