@@ -9,7 +9,9 @@ build:
     tests:
         override:
             -
-                command: 'vendor/bin/phpunit'
+                command:
+                    - 'composer update'
+                    - 'vendor/bin/phpunit'
                 coverage:
                     file: build/logs/clover.xml
                     format: php-clover
