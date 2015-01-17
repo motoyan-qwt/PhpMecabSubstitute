@@ -17,8 +17,7 @@ class ParseTest extends PHPUnit_Framework_TestCase
 	 */
 	public function test_出力結果の確認()
 	{
-		$expect = 'すもももももももものうち
-すもも	名詞,一般,*,*,*,*,すもも,スモモ,スモモ
+		$expect = 'すもも	名詞,一般,*,*,*,*,すもも,スモモ,スモモ
 も	助詞,係助詞,*,*,*,*,も,モ,モ
 もも	名詞,一般,*,*,*,*,もも,モモ,モモ
 も	助詞,係助詞,*,*,*,*,も,モ,モ

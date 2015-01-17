@@ -48,10 +48,12 @@ class MeCab_Leaf
 	public function __construct($mecab_leaf)
 	{
 		list($surface, $info) = explode("\t", $mecab_leaf);
-		list($feature, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */) = explode(',', $info);
-
 		$this->_surface = $surface;
-		$this->_feature = $feature;
+
+		if ($info) {
+			list($feature, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */) = explode(',', $info);
+			$this->_feature = $feature;
+		}
 	}
 
 	/**
