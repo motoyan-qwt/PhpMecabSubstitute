@@ -1,6 +1,7 @@
 build:
     dependencies:
         before:
+            - ls -al
             - sudo apt-get update
             - sudo apt-get -y install mecab libmecab-dev mecab-ipadic-utf8
     environment:
