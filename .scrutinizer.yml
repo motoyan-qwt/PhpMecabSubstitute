@@ -9,7 +9,7 @@ build:
     tests:
         override:
             -
-                command: 'rm -rf vendor && composer install && vendor/bin/phpunit'
+                command: 'phpunit'
                 coverage:
                     file: build/logs/clover.xml
                     format: php-clover
