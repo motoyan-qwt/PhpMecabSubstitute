@@ -16,7 +16,7 @@ class GetFeatureTest extends PHPUnit_Framework_TestCase
 	public function test_解析した単語の品詞が取得出来ること()
 	{
 		$node = $this->mecab->parseToNode(self::WORD);
-		$this->assertEquals('名詞', $node->getSurface());
-		$this->assertEquals('名詞', $node->getNext()->getSurface());
+		$this->assertEquals('名詞', $node->getFeature());
+		$this->assertEquals('名詞', $node->getNext()->getFeature());
 	}
 }
