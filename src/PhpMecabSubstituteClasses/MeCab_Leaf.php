@@ -1,5 +1,7 @@
 <?php
 
+namespace PhpMecabSubstituteClasses;
+
 /**
  * MeCab解析文字
  *
@@ -28,11 +30,6 @@ class MeCab_Leaf
 	const STAT_EOS = 3;
 
 	/**
-	 * @var int 解析文字状態
-	 */
-	private $_stat;
-
-	/**
 	 * @var string 解析文字
 	 */
 	private $_surface;
@@ -43,16 +40,16 @@ class MeCab_Leaf
 	private $_feature;
 
 	/**
-	 * @param string $mecab_leaf
+	 * @param string $leaf
 	 */
-	public function __construct($mecab_leaf)
+	public function __construct($leaf)
 	{
-		list($surface, $info) = explode("\t", $mecab_leaf);
-		$this->_surface = $surface;
+		$parsed_leaf = explode("\t", $leaf);
+		$this->_surface = empty($parsed_leaf[0]) ? '' : $parsed_leaf[0];
 
-		if ($info) {
-			list($feature, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */, /* ? */) = explode(',', $info);
-			$this->_feature = $feature;
+		if (!empty($parsed_leaf[1])) {
+			$leaf_info = explode(',', $parsed_leaf[1]);
+			$this->_feature = empty($leaf_info[0]) ? '' : $leaf_info[0];
 		}
 	}
 

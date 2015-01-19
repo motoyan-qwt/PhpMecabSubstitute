@@ -16,7 +16,8 @@
     },
     "autoload": {
         "psr-4": {
-            "": "src"
+            "": "src",
+            "PhpMecabSubstituteClasses\\": "src/PhpMecabSubstituteClasses"
         },
         "files": [
             "src/functions/global.php",

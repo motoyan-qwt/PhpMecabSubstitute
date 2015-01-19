@@ -1,5 +1,7 @@
 <?php
 
+use \PhpMecabSubstituteClasses\MeCab_Leaf;
+
 /**
  * MeCab解析文字集合
  *

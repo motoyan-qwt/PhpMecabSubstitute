@@ -1,5 +1,7 @@
 <?php
 
+namespace PhpMecabSubstituteClasses;
+
 /**
  * MeCab Shellコマンド生成オブジェクト
  *
@@ -38,7 +40,7 @@ class MeCab_Command
 	 */
 	public function exec($word)
 	{
-		return PhpMecabSubstitueFunctions\mecab_call($word, $this->_options);
+		return \PhpMecabSubstituteFunctions\mecab_call($word, $this->_options);
 	}
 
 	/**

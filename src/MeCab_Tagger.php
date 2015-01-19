@@ -1,5 +1,7 @@
 <?php
 
+use \PhpMecabSubstituteClasses\MeCab_Command;
+
 /**
  * php-mecabのMeCab_Tagger互換クラス
  *

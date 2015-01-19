@@ -6,9 +6,7 @@
  * @author qwintet
  */
 
-if (function_exists('mecab_split')) {
-	trigger_error('mecab_splitは既に定義されています', E_USER_WARNING);
-} else {
+if (!function_exists('mecab_split')) {
 	/**
 	 * 与えられた文字列を形態素解析して、結果配列を返す
 	 *
@@ -32,7 +30,7 @@ if (function_exists('mecab_split')) {
 			$options['-u'] = $userdic;
 		}
 
-		$mecab_result_lines = PhpMecabSubstitueFunctions\mecab_call($word, $options);
+		$mecab_result_lines = \PhpMecabSubstituteFunctions\mecab_call($word, $options);
 		if (!$mecab_result_lines) {
 			return array();
 		}
@@ -40,8 +38,8 @@ if (function_exists('mecab_split')) {
 		array_pop($mecab_result_lines);
 
 		return array_map(function($mecab_result_line) {
-			list($word, /* info */) = explode("\t", $mecab_result_line);
-			return $word;
+			$parsed_line = explode("\t", $mecab_result_line);
+			return empty($parsed_line[0]) ? '' : $parsed_line[0];
 		}, $mecab_result_lines);
 	}
 }

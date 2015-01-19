@@ -16,8 +16,8 @@ composerを利用してインストールします。
 
 ```js
 {
-    'require': {
-        'qwintet/php-mecab-substitute': 'dev-master'
+    "require": {
+        "qwintet/php-mecab-substitute": "dev-master"
     }
 }
 ```

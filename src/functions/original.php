@@ -6,7 +6,7 @@
  * @author qwintet
  */
 
-namespace PhpMecabSubstitueFunctions
+namespace PhpMecabSubstituteFunctions
 {
 	function make_mecab_command(array $options)
 	{
