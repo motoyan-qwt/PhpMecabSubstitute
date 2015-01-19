@@ -1,6 +1,6 @@
 <?php
 
-use PhpMecabSubstitueFunctions as F;
+use \PhpMecabSubstituteFunctions as F;
 
 class MakeMeCabCommandTest extends PHPUnit_Framework_TestCase
 {
